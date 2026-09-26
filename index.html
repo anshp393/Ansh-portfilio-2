@@ -1,319 +1,361 @@
-<!DOCTYPE html>
-
-<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-high": "#e8e8e8", "error-container": "#ffdad6", "on-secondary-fixed": "#001d33", "surface-container-highest": "#e2e2e2", "on-tertiary-fixed-variant": "#653e00", "inverse-primary": "#b5c7eb", "on-tertiary": "#ffffff", "secondary-container": "#74bcfe", "secondary-fixed": "#cfe5ff", "tertiary-fixed-dim": "#ffb95f", "primary-fixed": "#d6e3ff", "primary-container": "#091e3a", "on-primary-fixed-variant": "#354765", "inverse-on-surface": "#f0f1f1", "surface-dim": "#dadada", "inverse-surface": "#2f3131", "secondary-fixed-dim": "#98cbff", "on-background": "#1a1c1c", "on-primary-fixed": "#061c37", "surface-tint": "#4d5f7e", "surface-container-low": "#f3f3f4", "surface-variant": "#e2e2e2", "surface-container": "#eeeeee", "surface-bright": "#f9f9f9", "outline-variant": "#c4c6ce", "surface-container-lowest": "#ffffff", "on-secondary-container": "#004a78", "on-secondary": "#ffffff", "on-error-container": "#93000a", "on-primary-container": "#7486a8", "tertiary": "#0b0400", "on-error": "#ffffff", "primary-fixed-dim": "#b5c7eb", "on-surface-variant": "#44474d", "tertiary-container": "#2e1a00", "primary": "#000411", "outline": "#75777e", "on-tertiary-fixed": "#2a1700", "on-tertiary-container": "#bb7700", "secondary": "#00639d", "error": "#ba1a1a", "tertiary-fixed": "#ffddb8", "surface": "#f9f9f9", "on-primary": "#ffffff", "on-surface": "#1a1c1c", "on-secondary-fixed-variant": "#004a77", "background": "#f9f9f9" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "gutter": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "margin": "3rem" }, fontFamily: { "label-sm": ["Space Grotesk"], "body-sm": ["Plus Jakarta Sans"], "display-hero": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "label-md": ["Space Grotesk"], "display-hero-mobile": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "body-lead": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-code": ["JetBrains Mono"], "label-badge": ["JetBrains Mono"] }, fontSize: { "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lead": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-badge": ["11px", { "lineHeight": "14px", "fontWeight": "600" }], "label-code": ["13px", { "lineHeight": "18px", "fontWeight": "500" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
-    body {
-      min-height: max(884px, 100dvh);
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "surface-container-high": "#e8e8e8",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed": "#001d33",
+        "surface-container-highest": "#e2e2e2",
+        "on-tertiary-fixed-variant": "#653e00",
+        "inverse-primary": "#b5c7eb",
+        "on-tertiary": "#ffffff",
+        "secondary-container": "#74bcfe",
+        "secondary-fixed": "#cfe5ff",
+        "tertiary-fixed-dim": "#ffb95f",
+        "primary-fixed": "#d6e3ff",
+        "primary-container": "#091e3a",
+        "on-primary-fixed-variant": "#354765",
+        "inverse-on-surface": "#f0f1f1",
+        "surface-dim": "#dadada",
+        "inverse-surface": "#2f3131",
+        "secondary-fixed-dim": "#98cbff",
+        "on-background": "#1a1c1c",
+        "on-primary-fixed": "#061c37",
+        "surface-tint": "#4d5f7e",
+        "surface-container-low": "#f3f3f4",
+        "surface-variant": "#e2e2e2",
+        "surface-container": "#eeeeee",
+        "surface-bright": "#f9f9f9",
+        "outline-variant": "#c4c6ce",
+        "surface-container-lowest": "#ffffff",
+        "on-secondary-container": "#004a78",
+        "on-secondary": "#ffffff",
+        "on-error-container": "#93000a",
+        "on-primary-container": "#7486a8",
+        "tertiary": "#0b0400",
+        "on-error": "#ffffff",
+        "primary-fixed-dim": "#b5c7eb",
+        "on-surface-variant": "#44474d",
+        "tertiary-container": "#2e1a00",
+        "primary": "#091e3a",
+        "outline": "#75777e",
+        "on-tertiary-fixed": "#2a1700",
+        "on-tertiary-container": "#bb7700",
+        "secondary": "#00639d",
+        "error": "#ba1a1a",
+        "tertiary-fixed": "#ffddb8",
+        "surface": "#f9f9f9",
+        "on-primary": "#ffffff",
+        "on-surface": "#091e3a",
+        "on-secondary-fixed-variant": "#004a77",
+        "background": "#f0f8ff"
+      },
+      borderRadius: {
+        "DEFAULT": "1rem",
+        "lg": "1.5rem",
+        "xl": "2rem",
+        "full": "9999px"
+      },
+      spacing: {
+        "space-lg": "1.5rem",
+        "space-xs": "0.25rem",
+        "space-md": "1rem",
+        "space-xl": "2.25rem",
+        "space-sm": "0.5rem",
+        "margin": "1.5rem",
+        "gutter-mobile": "0.75rem",
+        "margin-mobile": "1rem",
+        "gutter": "1rem"
+      },
+      fontFamily: {
+        "display-hero": ["Space Grotesk"],
+        "label-badge": ["JetBrains Mono"],
+        "body-md": ["Inter", "Plus Jakarta Sans"],
+        "body-lg": ["Inter", "Plus Jakarta Sans"],
+        "headline-lg": ["Space Grotesk"],
+        "label-code": ["JetBrains Mono"],
+        "headline-md": ["Space Grotesk"],
+        "headline-lg-mobile": ["Space Grotesk"],
+        "display-hero-mobile": ["Space Grotesk"],
+        "body-sm": ["Inter", "Plus Jakarta Sans"]
+      },
+      fontSize: {
+        "display-hero": ["44px", { "lineHeight": "52px", "fontWeight": "700" }],
+        "label-badge": ["11px", { "lineHeight": "14px", "fontWeight": "600" }],
+        "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+        "label-code": ["12px", { "lineHeight": "18px", "fontWeight": "500" }],
+        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+        "display-hero-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+        "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }]
+      }
     }
-  </style>
-</head><body class="bg-gradient-to-b from-[#64a9f3] via-[#a0d3fb] to-[#e4f3fd] font-body-md text-[#1e293b] antialiased flex flex-col min-h-screen relative selection:bg-sky-200">
-<!-- Atmospheric Day Sky Elements (Sun, Birds, Clouds, Hills from Day Sky theme) -->
-<div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
-<!-- Glowing Sun in top right -->
-<div class="absolute top-12 right-6 w-28 h-28 rounded-full bg-gradient-to-br from-[#ffe978] via-[#ffd23f] to-[#ffb703] shadow-[0_0_60px_rgba(255,210,63,0.75)] animate-pulse" style="animation-duration: 4s;"></div>
-<!-- Subtle Soft Clouds -->
-<div class="absolute top-20 left-4 opacity-75">
-<div class="w-36 h-12 bg-white/70 backdrop-blur-[2px] rounded-full relative">
-<div class="w-16 h-16 bg-white/70 rounded-full absolute -top-6 left-6"></div>
-<div class="w-12 h-12 bg-white/70 rounded-full absolute -top-4 right-5"></div>
+  }
+};</script><style>
+@layer base{
+  html,body{width:100vw;margin:0;padding:0;}
+  body{overscroll-behavior:none;}
+  .pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}
+  .pt-safe{padding-top:env(safe-area-inset-top,0px);}
+  main>:first-child{margin-top:0!important;}
+  main>:last-child{margin-bottom:0!important;}
+}
+::-webkit-scrollbar{display:none;}
+
+/* Soft cloud shapes */
+.cloud-pill {
+  background: rgba(255, 255, 255, 0.92);
+  filter: drop-shadow(0 10px 25px rgba(100, 150, 200, 0.15));
+}
+
+/* Landscape wave background */
+.hills-bg {
+  background: radial-gradient(circle at 85% 12%, rgba(254, 240, 138, 0.8) 0%, rgba(253, 224, 71, 0.35) 24%, rgba(250, 204, 21, 0) 55%),
+              linear-gradient(180deg, #6ba7ec 0%, #89bef7 22%, #a8d5fa 45%, #cae8fd 72%, #e5f4fe 90%, #f4fbf7 100%);
+}
+</style></head>
+<body class="hills-bg font-body-md text-on-surface antialiased flex flex-col min-h-screen relative overflow-x-hidden">
+<!-- Day Sky Visual Layer: Sun, Clouds, Birds, Airplane & Horizon Curves -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<!-- Glowing Sun in Upper Right with soft radiant aura -->
+<div class="absolute -top-6 right-2 sm:right-12 w-48 h-48 rounded-full bg-amber-300/30 blur-2xl"></div>
+<div class="absolute top-10 right-8 w-20 h-20 rounded-full bg-gradient-to-tr from-amber-400 via-amber-200 to-yellow-100 shadow-[0_0_50px_rgba(251,191,36,0.65)] flex items-center justify-center">
+<div class="w-14 h-14 rounded-full bg-amber-100/90 blur-[1px]"></div>
+</div>
+<!-- Tiny playful Airplane / Bird path near sun -->
+<div class="absolute top-14 right-28 opacity-75 transform -rotate-12">
+<span class="material-symbols-outlined text-sky-800 text-[18px]">flight</span>
+</div>
+<div class="absolute top-28 right-44 opacity-60 text-sky-900 text-xs">✦</div>
+<!-- Floating Stylized Cloud (Upper Left) -->
+<div class="absolute top-20 left-4 sm:left-12 opacity-90 scale-90">
+<div class="relative w-36 h-14 bg-white/90 rounded-full shadow-md backdrop-blur-sm">
+<div class="absolute -top-6 left-6 w-16 h-16 bg-white/95 rounded-full"></div>
+<div class="absolute -top-3 left-16 w-12 h-12 bg-white/95 rounded-full"></div>
 </div>
 </div>
-<div class="absolute top-72 -right-8 opacity-60">
-<div class="w-44 h-14 bg-white/60 backdrop-blur-[2px] rounded-full relative">
-<div class="w-20 h-20 bg-white/60 rounded-full absolute -top-8 left-8"></div>
-<div class="w-14 h-14 bg-white/60 rounded-full absolute -top-5 right-7"></div>
+<!-- Distant subtle birds -->
+<div class="absolute top-44 left-1/3 opacity-40 text-sky-900 font-serif text-[11px] select-none tracking-widest">
+    v &nbsp; &nbsp; v
+  </div>
+<div class="absolute top-72 right-12 opacity-35 text-sky-900 font-serif text-[10px] select-none">
+    v
+  </div>
+<!-- Floating soft cloud (Mid Right) -->
+<div class="absolute top-96 -right-10 opacity-70 scale-75">
+<div class="relative w-44 h-16 bg-white/85 rounded-full shadow-sm">
+<div class="absolute -top-8 left-10 w-20 h-20 bg-white/90 rounded-full"></div>
 </div>
 </div>
-<!-- Flying Bird Silhouettes (like reference) -->
-<svg class="absolute top-28 left-40 w-5 h-5 text-sky-800/40" fill="currentColor" viewbox="0 0 24 24">
-<path d="M2 12c4-4 8-1 10 2 2-3 6-6 10-2-3 5-7 6-10 4-3 2-7 1-10-4z"></path>
+<!-- Bottom Landscape Green Hill Curves matching Krishnakant Shukla reference -->
+<div class="absolute bottom-0 left-0 right-0 h-40 w-full overflow-hidden opacity-90">
+<svg class="absolute bottom-0 w-full h-32 preserve-3d" fill="none" preserveAspectRatio="none" viewBox="0 0 1200 240" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 130 C 320 80, 580 180, 840 120 C 1020 80, 1140 100, 1200 110 L 1200 240 L 0 240 Z" fill="#bbf0c8" fill-opacity="0.35"></path>
+<path d="M0 160 C 260 120, 520 210, 860 150 C 1050 110, 1150 140, 1200 150 L 1200 240 L 0 240 Z" fill="#86efac" fill-opacity="0.45"></path>
+<path d="M0 190 C 350 150, 700 220, 950 180 C 1080 160, 1160 175, 1200 180 L 1200 240 L 0 240 Z" fill="#58a379" fill-opacity="0.75"></path>
 </svg>
-<svg class="absolute top-44 left-16 w-4 h-4 text-sky-800/35" fill="currentColor" viewbox="0 0 24 24">
-<path d="M2 12c4-4 8-1 10 2 2-3 6-6 10-2-3 5-7 6-10 4-3 2-7 1-10-4z"></path>
-</svg>
-<svg class="absolute top-24 right-36 w-6 h-6 text-sky-800/40" fill="currentColor" viewbox="0 0 24 24">
-<path d="M2 12c4-4 8-1 10 2 2-3 6-6 10-2-3 5-7 6-10 4-3 2-7 1-10-4z"></path>
-</svg>
-<!-- Layered Green Hill Contours at the bottom (matching Day Sky reference) -->
-<div class="absolute bottom-0 left-0 right-0 h-44 overflow-hidden pointer-events-none">
-<svg class="absolute bottom-0 w-[150%] -left-[25%] h-36" fill="none" preserveaspectratio="none" viewbox="0 0 1000 200">
-<path d="M0,130 C300,70 650,170 1000,90 L1000,200 L0,200 Z" fill="#93c59a" opacity="0.45"></path>
-</svg>
-<svg class="absolute bottom-0 w-[150%] -left-[15%] h-28" fill="none" preserveaspectratio="none" viewbox="0 0 1000 200">
-<path d="M0,110 C350,180 700,60 1000,120 L1000,200 L0,200 Z" fill="#6ba879" opacity="0.55"></path>
-</svg>
-<svg class="absolute bottom-0 w-full h-20" fill="none" preserveaspectratio="none" viewbox="0 0 1000 200">
-<path d="M0,100 C400,40 750,140 1000,70 L1000,200 L0,200 Z" fill="#4d8b63" opacity="0.65"></path>
-</svg>
 </div>
 </div>
-<header class="fixed top-0 w-full z-50 pt-safe bg-white/75 backdrop-blur-xl border-b border-white/60 shadow-[0_2px_12px_rgba(0,35,80,0.06)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Ansh Pandey Monogram Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1UQ3evEhtaXp2dH_KBDerSBbKZv-zm8SYoXg19ZGGT-V6Q34btgjFiBhxT84BN3a0RQbD_glXt4gr0edX2WVXO8Rh7p8AsckUytOWh33_1KhZHehKOrg8Ev3S4sjyt7xK7jf1ADvkMcMd8emm44xJn78YceKboCdD9CYx_TRkVlyoTHUDVSp39YvnL6c-hEl6nIPjGd1kdBRai__HeeVIrTYHsJ53BQz2yCmBemt182iMXP7pP1GCqo_8I"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-[#091e3a] tracking-tight truncate">Ansh Pandey</span><span class="font-label-badge text-label-badge px-space-xs py-0.5 rounded-full bg-sky-100/90 text-sky-800 border border-sky-300/60 truncate font-semibold">Pratapgarh, UP</span></div><span class="font-body-sm text-body-sm text-[#475569] truncate">About Me • Ansh Pandey</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a aria-label="Connect" class="w-9 h-9 rounded-full bg-white/90 border border-sky-200/80 shadow-sm flex items-center justify-center text-[#091e3a] hover:bg-sky-50 transition-colors" data-path="contact-ansh-pandey" href="#"><span class="material-symbols-outlined text-[18px]">mail</span></a></div></div></header>
-<main class="flex flex-col relative w-full pt-16 pb-24 min-h-screen z-10"><div class="flex flex-col w-full">
-<div class="px-margin-mobile flex flex-col gap-space-lg pb-space-xl">
-<!-- Hero / Lead Banner -->
-<section class="relative overflow-hidden rounded-2xl bg-white/85 backdrop-blur-md p-space-lg shadow-[0_8px_24px_rgba(15,45,85,0.08)] border border-white/70">
-<div class="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-sky-200/50 blur-3xl pointer-events-none"></div>
-<div class="absolute -left-10 -bottom-10 w-36 h-36 rounded-full bg-amber-100/60 blur-2xl pointer-events-none"></div>
-<div class="relative flex flex-col gap-space-sm">
-<div class="flex flex-wrap items-center justify-between gap-space-xs">
-<span class="font-label-badge text-label-badge text-sky-900 px-space-xs py-0.5 rounded-full bg-sky-100/90 border border-sky-200 font-semibold">
-            01 // STUDENT &amp; ASPIRING BUILDER
-          </span>
-<span class="font-label-badge text-label-badge text-emerald-800 px-space-xs py-0.5 rounded-full bg-emerald-50 border border-emerald-200/60 font-semibold">
-            Class 10 CBSE • Pratapgarh, UP
-          </span>
+<!-- Header / Navigation Bar -->
+<header class="fixed top-0 w-full z-50 pt-safe bg-white/70 backdrop-blur-xl border-b border-white/60 shadow-[0_2px_12px_rgba(15,23,42,0.04)]">
+<div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<img alt="Ansh Pandey Monogram Logo" class="h-8 w-auto object-contain flex-shrink-0 drop-shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1UQ3evEhtaXp2dH_KBDerSBbKZv-zm8SYoXg19ZGGT-V6Q34btgjFiBhxT84BN3a0RQbD_glXt4gr0edX2WVXO8Rh7p8AsckUytOWh33_1KhZHehKOrg8Ev3S4sjyt7xK7jf1ADvkMcMd8emm44xJn78YceKboCdD9CYx_TRkVlyoTHUDVSp39YvnL6c-hEl6nIPjGd1kdBRai__HeeVIrTYHsJ53BQz2yCmBemt182iMXP7pP1GCqo_8I">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-slate-900 font-bold tracking-tight truncate">Ansh Pandey</span>
+<span class="font-label-badge text-[10px] px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 border border-sky-200/80 font-semibold truncate">Pratapgarh, UP</span>
 </div>
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-[#091e3a] tracking-tight mt-space-xs font-bold">
-          About Me
-        </h1>
-<p class="font-body-md text-body-md text-[#1e293b] leading-relaxed">
-          I'm a Class 10 student from Pratapgarh, Uttar Pradesh, currently focused on my education and personal growth.
+<span class="font-body-sm text-xs text-slate-600 truncate">Creative Builder &amp; Developer</span>
+</div>
+</div>
+<!-- Day Sky Mood Pill & Profile -->
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-50 border border-amber-200/80 text-amber-800 shadow-xs">
+<span class="text-xs">☀️</span>
+<span class="font-label-badge text-[10px] tracking-wide uppercase font-semibold">Day Sky</span>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-slate-200 shadow-xs flex-shrink-0"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1DYj3QKSUisl1y62hHT1VjVDkIdG33WUphWoUH3sBkwye7TYyZnMpw9gt6sNOaZXdTAiBtpHNbV-l66uK5MT3xYelBO1I3jbJNRNKIBOQY91i_C9358-QBmGOS9vqfPJLhNoKWadScwvdQeEEdrnMCltIp3PFp05hqWFEHzHcUq7QhynOeR0rwEaVleIKYfc9MYXvERmG4I3bRtpSoP5ETmYO5L3cZqg32ZUecFhBkwqATsxZKFIVRobte2GfZxkZBA" alt="Ansh Pandey" class="w-full h-full object-cover"></div>
+</div>
+</div>
+</header>
+<!-- Main Scroll Area -->
+<main class="flex flex-col relative w-full pt-20 pb-28 min-h-screen z-10">
+<div class="flex flex-col w-full px-margin-mobile gap-space-lg">
+<!-- Hero Introduction with Glass Pill badge -->
+<div class="relative overflow-hidden rounded-2xl bg-white/85 backdrop-blur-xl border border-white/80 p-space-md shadow-lg shadow-sky-900/5">
+<div class="absolute -right-8 -top-8 w-36 h-36 rounded-full bg-amber-200/30 blur-2xl pointer-events-none"></div>
+<div class="relative flex flex-col gap-space-xs"><div class="flex items-center justify-between mb-1"><div class="relative inline-flex items-center"><div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md ring-4 ring-sky-100"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt0zkv7D0JoXrbCwyq90WTpo6dyG53cT4dQOjEJtaykIpwSqnHt2cjS9mIaiy_5Vv5WuJDVQGu3TCv3AJ2AwITAWNDlLqWHAImgnPiCah-rO5FvGA2RaJQaqBl5TA6XxK1unpp_2zLZAMSJYq_G1lU1jawsOxFj4FJVjyIOCVBX2WG8nnKt_5AJz4v__10zxcdm9Q3wJRJl_t_35cXQvCwbf3KCeKkJmKG9DaApG8A1Mez0uwEfJPpYjlcftDPBpR9RA" alt="Ansh Pandey" class="w-full h-full object-cover"></div><div class="absolute -bottom-1 -right-2 px-2 py-0.5 rounded-full bg-white/95 border border-amber-200/80 shadow-xs flex items-center gap-1"><span class="font-label-badge text-[10px] text-amber-800 font-semibold tracking-wide">Hello! ✨</span></div></div></div>
+<div class="inline-flex items-center gap-space-xs self-start px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+<span class="font-label-badge text-[10px] tracking-wider uppercase font-semibold">AVAILABLE FOR IMPACT</span>
+</div>
+<h1 class="font-display-hero-mobile text-display-hero-mobile text-slate-900 tracking-tight mt-1 font-bold">
+          Namaste! I am <span class="text-sky-700">Ansh Pandey</span>
+</h1>
+<p class="font-body-md text-body-md text-slate-600 font-normal leading-relaxed">
+          Creative Builder &amp; Developer from <strong class="text-slate-800 font-semibold">Pratapgarh, Uttar Pradesh</strong>. Turning complex engineering problems into delightful, high-performance web products.
         </p>
-<!-- Visual Portrait Spotlight Placeholder -->
-<div class="relative w-full rounded-2xl overflow-hidden mt-space-xs shadow-md border border-sky-200/70 bg-slate-900"><div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-center justify-between pointer-events-none"><span class="font-label-badge text-label-badge text-white bg-slate-900/80 px-space-xs py-0.5 rounded backdrop-blur-md border border-white/10 font-medium">PRATAPGARH ROOTS</span><span class="flex items-center gap-1 font-label-badge text-label-badge text-emerald-300 bg-slate-900/80 px-space-xs py-0.5 rounded backdrop-blur-md border border-white/10 font-medium"><span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>ACTIVE LEARNER</span></div></div>
+<!-- Hometown Pill Tag -->
+<div class="mt-2 flex flex-wrap gap-2 items-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 text-sky-900 border border-sky-100 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px] text-sky-600">location_on</span>
+            Pratapgarh Core
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-100 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px] text-amber-600">bolt</span>
+            Fullstack Engineering
+          </span>
 </div>
-</section>
-<!-- Academic Journey & Curiosity Card -->
-<section class="rounded-2xl bg-white/90 backdrop-blur-md p-space-lg shadow-[0_4px_20px_rgba(15,45,85,0.06)] border border-white/80 flex flex-col gap-space-md">
+</div>
+</div>
+<!-- Animated Coder Card framed in crisp white card matching Krishnakant Shukla style -->
+<div class="flex flex-col gap-space-md w-full">
+<div class="relative flex flex-col items-center justify-center rounded-2xl bg-white/90 backdrop-blur-xl border border-white/90 p-space-sm shadow-xl shadow-sky-900/5">
+<div class="w-full flex items-center justify-between px-space-xs pb-space-xs border-b border-slate-100 mb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+<span class="font-label-badge text-xs font-semibold text-slate-800">Developer at Work: Building Experiences</span>
+</div>
+<span class="font-label-badge text-[11px] px-2 py-0.5 rounded-md bg-amber-50 text-amber-700 border border-amber-200 font-medium">Look here ✨</span>
+</div>
+<!-- Animated coder container with clean presentation -->
+<div class="w-full rounded-xl overflow-hidden bg-slate-950 shadow-inner border border-slate-200">
+
+</div>
+<div class="relative mt-3 z-10 w-full flex items-center justify-center gap-space-xs px-space-md py-2 rounded-xl bg-sky-50/90 border border-sky-100 text-sky-950 shadow-xs">
+<span class="text-amber-500 material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">bolt</span>
+<span class="font-label-code text-xs text-center font-medium">Crafting digital experiences with hammer &amp; code</span>
+</div>
+</div>
+<!-- Neural Network Card framed cleanly -->
+<div class="relative flex flex-col rounded-2xl bg-white/90 backdrop-blur-xl border border-white/90 p-space-sm shadow-xl shadow-sky-900/5 gap-space-xs">
+<div class="flex items-center justify-between px-space-xs pt-space-xs">
+<span class="font-label-badge text-xs font-semibold text-slate-800">01 // Neural Data Network • Pratapgarh Core</span>
+<span class="font-label-code text-xs font-semibold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">Active Matrix</span>
+</div>
+<div class="w-full rounded-xl overflow-hidden bg-slate-950 shadow-inner border border-slate-200">
+
+</div>
+</div>
+</div>
+<!-- Call to Actions -->
+<div class="flex flex-col sm:flex-row items-center gap-space-sm w-full">
+<a class="w-full sm:flex-1 flex items-center justify-center gap-space-xs py-3 px-space-md rounded-xl bg-slate-900 text-white font-body-md text-sm font-semibold shadow-md hover:bg-slate-800 active:scale-95 transition-all text-center" data-path="biodata" href="#">
+<span class="">Explore Biodata</span>
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</a>
+<a class="w-full sm:flex-1 flex items-center justify-center gap-space-xs py-3 px-space-md rounded-xl bg-white/90 backdrop-blur-md text-slate-900 border border-white/90 font-body-md text-sm font-semibold shadow-sm hover:bg-white active:scale-95 transition-all text-center" data-path="contact" href="#">
+<span class="">Get in Touch</span>
+<span class="material-symbols-outlined text-[18px] text-sky-700">send</span>
+</a>
+<a href="https://www.linkedin.com/in/ansh-pandey-57409343a?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="w-full sm:flex-1 flex items-center justify-center gap-space-xs py-3 px-space-md rounded-xl bg-sky-50 text-sky-900 border border-sky-200/80 font-body-md text-sm font-semibold shadow-xs hover:bg-sky-100 active:scale-95 transition-all text-center"><span class="material-symbols-outlined text-[18px] text-sky-700">link</span><span class="">LinkedIn</span></a></div>
+<!-- Informational Cards (Origin, Mindset, Quick Stats) in Crisp Light Day-Sky Theme -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- 01 ORIGIN -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-2xl bg-white/85 backdrop-blur-xl border border-white/80 shadow-md shadow-sky-900/5">
 <div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs">
-<div class="w-9 h-9 rounded-xl bg-sky-50 border border-sky-200/70 flex items-center justify-center text-sky-700 shadow-sm">
-<span class="material-symbols-outlined text-[20px]">menu_book</span>
+<div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center text-sky-700 shadow-xs">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
 </div>
-<div>
-<span class="font-label-badge text-label-badge text-sky-800 block uppercase tracking-wider font-semibold">FOUNDATIONS</span>
-<h2 class="font-headline-md text-headline-md text-[#091e3a] leading-tight font-bold">Academic Journey &amp; Curiosity</h2>
+<span class="font-label-badge text-[11px] text-slate-500 font-semibold">01 // ORIGIN</span>
 </div>
+<h3 class="font-headline-md text-lg text-slate-900 font-bold mt-space-xs">Rooted in Pratapgarh</h3>
+<p class="font-body-sm text-sm text-slate-600 leading-relaxed">
+          Proud UP roots, passionate about tech and building scalable software that touches lives. Bringing the grounded spirit of Pratapgarh into every line of code.
+        </p>
 </div>
-</div>
-<p class="font-body-md text-body-md text-[#334155] leading-relaxed">
-        I enjoy learning new concepts, especially in Mathematics, Science, Technology, and Social Science. Right now, my main priority is to build strong academic fundamentals and perform well in my Class 10 CBSE Board Exams.
-      </p>
-<div class="flex flex-wrap gap-space-xs pt-space-xs">
-<span class="font-label-code text-label-code bg-sky-50/90 text-sky-900 border border-sky-200/80 px-space-sm py-1 rounded-xl flex items-center gap-1 font-semibold">
-<span class="material-symbols-outlined text-[15px] text-sky-600">calculate</span> Mathematics
-</span>
-<span class="font-label-code text-label-code bg-sky-50/90 text-sky-900 border border-sky-200/80 px-space-sm py-1 rounded-xl flex items-center gap-1 font-semibold">
-<span class="material-symbols-outlined text-[15px] text-sky-600">science</span> Science
-</span>
-<span class="font-label-code text-label-code bg-sky-50/90 text-sky-900 border border-sky-200/80 px-space-sm py-1 rounded-xl flex items-center gap-1 font-semibold">
-<span class="material-symbols-outlined text-[15px] text-sky-600">memory</span> Technology
-</span>
-<span class="font-label-code text-label-code bg-sky-50/90 text-sky-900 border border-sky-200/80 px-space-sm py-1 rounded-xl flex items-center gap-1 font-semibold">
-<span class="material-symbols-outlined text-[15px] text-sky-600">public</span> Social Science
-</span>
-</div>
-</section>
-<!-- Tech & Future Exploration Card -->
-<section class="rounded-2xl bg-white/90 backdrop-blur-md p-space-lg shadow-[0_4px_20px_rgba(15,45,85,0.06)] border border-white/80 flex flex-col gap-space-md">
-<div class="flex items-center gap-space-xs">
-<div class="w-9 h-9 rounded-xl bg-indigo-50 border border-indigo-200/70 flex items-center justify-center text-indigo-700 shadow-sm">
-<span class="material-symbols-outlined text-[20px]">terminal</span>
-</div>
-<div>
-<span class="font-label-badge text-label-badge text-indigo-800 block uppercase tracking-wider font-semibold">HORIZONS</span>
-<h2 class="font-headline-md text-headline-md text-[#091e3a] leading-tight font-bold">Tech &amp; Future Exploration</h2>
-</div>
-</div>
-<p class="font-body-md text-body-md text-[#334155] leading-relaxed">
-        I'm also interested in technology, coding, web development, and communication. These are areas I want to explore and learn step by step in the future.
-      </p>
-<div class="flex flex-col gap-space-xs rounded-2xl overflow-hidden border border-indigo-200 bg-slate-900 p-space-sm shadow-sm"><div class="flex items-center justify-between px-1"><span class="font-label-badge text-label-badge text-sky-300 flex items-center gap-1 font-medium"><span class="material-symbols-outlined text-[15px]">neurology</span>Neural Computing &amp; Data Science Exploration</span><span class="font-label-code text-[11px] text-emerald-300">Interactive Synapse</span></div></div><div class="grid grid-cols-2 gap-space-xs pt-space-xs">
-<div class="p-space-sm rounded-xl bg-sky-50/70 border border-sky-100 flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-sky-700 text-[18px]">devices</span>
-<span class="font-label-code text-label-code text-[#091e3a] font-semibold">Technology</span>
-</div>
-<div class="p-space-sm rounded-xl bg-sky-50/70 border border-sky-100 flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-indigo-700 text-[18px]">code</span>
-<span class="font-label-code text-label-code text-[#091e3a] font-semibold">Coding</span>
-</div>
-<div class="p-space-sm rounded-xl bg-sky-50/70 border border-sky-100 flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-emerald-700 text-[18px]">language</span>
-<span class="font-label-code text-label-code text-[#091e3a] font-semibold">Web Dev</span>
-</div>
-<div class="p-space-sm rounded-xl bg-sky-50/70 border border-sky-100 flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-amber-700 text-[18px]">forum</span>
-<span class="font-label-code text-label-code text-[#091e3a] font-semibold">Communication</span>
-</div>
-</div>
-</section>
-<!-- Personal Growth & Self Improvement Section -->
-<section class="rounded-2xl bg-white/90 backdrop-blur-md p-space-lg shadow-[0_4px_20px_rgba(15,45,85,0.06)] border border-white/80 flex flex-col gap-space-md">
-<div class="flex items-center gap-space-xs">
-<div class="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-200/70 flex items-center justify-center text-emerald-700 shadow-sm">
-<span class="material-symbols-outlined text-[20px]">trending_up</span>
-</div>
-<div>
-<span class="font-label-badge text-label-badge text-emerald-800 block uppercase tracking-wider font-semibold">EVOLUTION</span>
-<h2 class="font-headline-md text-headline-md text-[#091e3a] leading-tight font-bold">Personal Growth &amp; Self Improvement</h2>
-</div>
-</div>
-<p class="font-body-md text-body-md text-[#334155] leading-relaxed">
-        Along with academics, I'm working on improving my English communication, confidence, problem-solving ability, and overall personality.
-      </p>
-<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
-<div class="p-space-sm rounded-xl bg-gradient-to-b from-white to-sky-50/50 border border-sky-200/60 shadow-sm flex flex-col gap-space-xs">
+<!-- 02 MINDSET -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-2xl bg-white/85 backdrop-blur-xl border border-white/80 shadow-md shadow-sky-900/5">
 <div class="flex items-center justify-between">
-<span class="material-symbols-outlined text-sky-700 text-[18px]">translate</span>
-<span class="font-label-badge text-label-badge text-sky-800 bg-sky-100 px-1.5 py-0.5 rounded font-semibold">DAILY</span>
+<div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700 shadow-xs">
+<span class="material-symbols-outlined text-[22px]">construction</span>
 </div>
-<span class="font-headline-md text-[14px] leading-tight text-[#091e3a] font-bold">English Communication</span>
-<span class="font-body-sm text-body-sm text-[#64748b]">Speaking &amp; writing drills</span>
+<span class="font-label-badge text-[11px] text-slate-500 font-semibold">02 // MINDSET</span>
 </div>
-<div class="p-space-sm rounded-xl bg-gradient-to-b from-white to-sky-50/50 border border-sky-200/60 shadow-sm flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-lg text-slate-900 font-bold mt-space-xs">Builder Mindset</h3>
+<p class="font-body-sm text-sm text-slate-600 leading-relaxed">
+          Problem solver who loves turning ambiguous ideas into fast, resilient reality. Relentless curiosity and an engineer's eye for polish.
+        </p>
+</div>
+<!-- 03 METRICS -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-2xl bg-white/85 backdrop-blur-xl border border-white/80 shadow-md shadow-sky-900/5">
 <div class="flex items-center justify-between">
-<span class="material-symbols-outlined text-indigo-700 text-[18px]">psychology_alt</span>
-<span class="font-label-badge text-label-badge text-indigo-800 bg-indigo-100 px-1.5 py-0.5 rounded font-semibold">MINDSET</span>
+<div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 shadow-xs">
+<span class="material-symbols-outlined text-[22px]">analytics</span>
 </div>
-<span class="font-headline-md text-[14px] leading-tight text-[#091e3a] font-bold">Confidence</span>
-<span class="font-body-sm text-body-sm text-[#64748b]">Public speaking focus</span>
+<span class="font-label-badge text-[11px] text-slate-500 font-semibold">03 // METRICS</span>
 </div>
-<div class="p-space-sm rounded-xl bg-gradient-to-b from-white to-sky-50/50 border border-sky-200/60 shadow-sm flex flex-col gap-space-xs">
-<div class="flex items-center justify-between">
-<span class="material-symbols-outlined text-emerald-700 text-[18px]">extension</span>
-<span class="font-label-badge text-label-badge text-emerald-800 bg-emerald-100 px-1.5 py-0.5 rounded font-semibold">LOGIC</span>
+<h3 class="font-headline-md text-lg text-slate-900 font-bold">Quick Stats</h3>
+<div class="grid grid-cols-3 gap-space-xs mt-auto pt-space-xs">
+<div class="flex flex-col items-center p-2 rounded-xl bg-sky-50/80 border border-sky-100 text-center">
+<span class="font-headline-md text-base text-sky-900 font-bold">10+</span>
+<span class="font-label-badge text-[10px] text-slate-500 font-medium">Built</span>
 </div>
-<span class="font-headline-md text-[14px] leading-tight text-[#091e3a] font-bold">Problem-Solving</span>
-<span class="font-body-sm text-body-sm text-[#64748b]">Maths &amp; logical challenges</span>
+<div class="flex flex-col items-center p-2 rounded-xl bg-emerald-50/80 border border-emerald-100 text-center">
+<span class="font-headline-md text-base text-emerald-800 font-bold">100%</span>
+<span class="font-label-badge text-[10px] text-slate-500 font-medium">Focus</span>
 </div>
-<div class="p-space-sm rounded-xl bg-gradient-to-b from-white to-sky-50/50 border border-sky-200/60 shadow-sm flex flex-col gap-space-xs">
-<div class="flex items-center justify-between">
-<span class="material-symbols-outlined text-amber-700 text-[18px]">diversity_3</span>
-<span class="font-label-badge text-label-badge text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded font-semibold">HABITS</span>
-</div>
-<span class="font-headline-md text-[14px] leading-tight text-[#091e3a] font-bold">Personality Development</span>
-<span class="font-body-sm text-body-sm text-[#64748b]">Discipline &amp; mindset</span>
+<div class="flex flex-col items-center p-2 rounded-xl bg-amber-50/80 border border-amber-100 text-center">
+<span class="font-headline-md text-base text-amber-800 font-bold">Open</span>
+<span class="font-label-badge text-[10px] text-slate-500 font-medium">Collab</span>
 </div>
 </div>
-</section>
-<!-- Long-term Aspiration & Purpose Card -->
-<section class="rounded-2xl bg-white/90 backdrop-blur-md p-space-lg shadow-[0_4px_20px_rgba(15,45,85,0.06)] border border-white/80 flex flex-col gap-space-md relative overflow-hidden">
-<div class="absolute right-0 top-0 w-32 h-32 rounded-full bg-sky-200/40 blur-2xl pointer-events-none"></div>
-<div class="flex items-center gap-space-xs">
-<div class="w-9 h-9 rounded-xl bg-amber-50 border border-amber-200/70 flex items-center justify-center text-amber-700 shadow-sm">
-<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
-</div>
-<div>
-<span class="font-label-badge text-label-badge text-amber-800 block uppercase tracking-wider font-semibold">LONG-TERM ASPIRATION</span>
-<h2 class="font-headline-md text-headline-md text-[#091e3a] leading-tight font-bold">Purpose &amp; Ambition</h2>
 </div>
 </div>
-<p class="font-body-md text-body-md text-[#334155] leading-relaxed">
-        My long-term goal is to become an Engineer and Entrepreneur and use my knowledge and skills to create useful solutions that can help people.
-      </p>
-<div class="flex flex-wrap gap-space-xs pt-space-xs">
-<span class="font-label-badge text-label-badge px-space-sm py-1 rounded-full bg-sky-100 text-[#091e3a] border border-sky-300/60 font-semibold">
-          Engineer
-        </span>
-<span class="font-label-badge text-label-badge px-space-sm py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300/60 font-semibold">
-          Entrepreneur
-        </span>
-<span class="font-label-badge text-label-badge px-space-sm py-1 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300/60 font-semibold">
-          Problem Solver
-        </span>
-</div>
-</section>
-<!-- Currently Focused On Checklist Card -->
-<section class="rounded-2xl bg-white/90 backdrop-blur-md p-space-lg shadow-[0_4px_20px_rgba(15,45,85,0.06)] border border-white/80 flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs">
-<div class="w-9 h-9 rounded-xl bg-sky-50 border border-sky-200/70 flex items-center justify-center text-sky-700 shadow-sm">
-<span class="material-symbols-outlined text-[20px]">task_alt</span>
-</div>
-<div>
-<span class="font-label-badge text-label-badge text-sky-800 block uppercase tracking-wider font-semibold">ACTIVE TRACKER</span>
-<h2 class="font-headline-md text-headline-md text-[#091e3a] leading-tight font-bold">Currently Focused On</h2>
+<!-- Quote Card in Frosted Glass -->
+<div class="relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl border border-white/90 p-space-md shadow-md shadow-sky-900/5 text-center">
+<div class="absolute -left-6 -bottom-6 w-28 h-28 rounded-full bg-sky-200/30 blur-2xl pointer-events-none"></div>
+<div class="relative flex flex-col items-center gap-space-xs">
+<span class="material-symbols-outlined text-amber-500 text-[28px]">format_quote</span>
+<p class="font-headline-lg-mobile text-headline-lg-mobile text-slate-900 italic font-semibold max-w-md">
+          “Crafting pixel-perfect code from Pratapgarh to the world.”
+        </p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>
+<span class="font-label-code text-xs text-slate-500 uppercase tracking-wider">Ansh Pandey // Vision</span>
 </div>
 </div>
-<span class="font-label-badge text-label-badge text-sky-900 bg-sky-100 px-space-xs py-0.5 rounded-full border border-sky-200 font-semibold">6 PRIORITIES</span>
 </div>
-<div class="flex flex-col gap-space-xs">
-<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-sky-50/50 border border-sky-100 hover:bg-sky-50 transition-colors">
-<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
-<span class="font-body-md text-body-md text-[#1e293b] font-medium">Class 10 CBSE Education</span>
-</div>
-<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-sky-50/50 border border-sky-100 hover:bg-sky-50 transition-colors">
-<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
-<span class="font-body-md text-body-md text-[#1e293b] font-medium">Mathematics &amp; Science</span>
-</div>
-<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-sky-50/50 border border-sky-100 hover:bg-sky-50 transition-colors">
-<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
-<span class="font-body-md text-body-md text-[#1e293b] font-medium">Building Strong Fundamentals</span>
-</div>
-<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-sky-50/50 border border-sky-100 hover:bg-sky-50 transition-colors">
-<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
-<span class="font-body-md text-body-md text-[#1e293b] font-medium">English Communication</span>
-</div>
-<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-sky-50/50 border border-sky-100 hover:bg-sky-50 transition-colors">
-<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
-<span class="font-body-md text-body-md text-[#1e293b] font-medium">Problem-Solving</span>
-</div>
-<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-sky-50/50 border border-sky-100 hover:bg-sky-50 transition-colors">
-<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
-<span class="font-body-md text-body-md text-[#1e293b] font-medium">Exploring Technology &amp; Coding</span>
+<!-- Hometown Photo Banner -->
+<div class="relative rounded-2xl overflow-hidden shadow-md border border-white/80 h-40 bg-white">
+<div class="w-full h-full bg-cover bg-center" data-alt="Warm atmospheric cinematic capture of Pratapgarh Uttar Pradesh countryside landscape with sunrise light blending into modern laptop glow, tech builder concept, warm amber lighting" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDXm5cdaJ5M7nwkShTkaYROVuJeCFGYFQdrZtI09XTW3MINQpbJWlldC9IIVMCZgcYYBjwj1LhPuttExt5cXU7cQ_rpC1bEPRM87OXq7kNYBKEwxA5r3o3NOhwhyuTOyNEEx4FBsBegsVBZY_y7rB92f1J-E-4I2L1lyeYzmh1yu8pv-LKcTqtXZOIM4Mqpt3UCnhd-1sfsJySuXlZ75396pF_2e9RJSdfQOIqYZYTs4CvdC6f8T8SP&quot;);">
+<div class="w-full h-full bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-transparent p-space-md flex flex-col justify-end">
+<span class="font-label-badge text-xs text-amber-300 font-bold uppercase tracking-wider">Hometown Horizon</span>
+<span class="font-body-sm text-xs text-white/95">Roots anchored in heritage, vision stretched across modern web craft.</span>
 </div>
 </div>
-</section>
-<!-- My Vision Flow Banner -->
-<section class="rounded-2xl bg-white/90 backdrop-blur-md p-space-lg shadow-[0_4px_20px_rgba(15,45,85,0.06)] border border-white/80 flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
-<div>
-<span class="font-label-badge text-label-badge text-sky-800 block uppercase tracking-wider font-semibold">ROADMAP</span>
-<h2 class="font-headline-md text-headline-md text-[#091e3a] leading-tight font-bold">My Vision</h2>
-</div>
-<span class="material-symbols-outlined text-sky-600 text-[20px]">timeline</span>
-</div>
-<!-- Stepper / Progression Cards -->
-<div class="grid grid-cols-4 gap-space-xs items-center">
-<div class="flex flex-col items-center justify-center p-space-xs py-space-sm rounded-xl bg-sky-50/70 border border-sky-100 text-center">
-<span class="material-symbols-outlined text-[20px] text-sky-700">auto_stories</span>
-<span class="font-label-badge text-label-badge text-[#091e3a] mt-1 font-semibold">Learn</span>
-</div>
-<div class="flex flex-col items-center justify-center p-space-xs py-space-sm rounded-xl bg-emerald-50/70 border border-emerald-100 text-center">
-<span class="material-symbols-outlined text-[20px] text-emerald-700">trending_up</span>
-<span class="font-label-badge text-label-badge text-[#091e3a] mt-1 font-semibold">Improve</span>
-</div>
-<div class="flex flex-col items-center justify-center p-space-xs py-space-sm rounded-xl bg-indigo-50/70 border border-indigo-100 text-center">
-<span class="material-symbols-outlined text-[20px] text-indigo-700">construction</span>
-<span class="font-label-badge text-label-badge text-[#091e3a] mt-1 font-semibold">Build</span>
-</div>
-<div class="flex flex-col items-center justify-center p-space-xs py-space-sm rounded-xl bg-amber-50/70 border border-amber-100 text-center">
-<span class="material-symbols-outlined text-[20px] text-amber-700">public</span>
-<span class="font-label-badge text-label-badge text-[#091e3a] mt-1 font-semibold">Create Impact</span>
 </div>
 </div>
-<div class="p-space-sm rounded-xl bg-sky-50/50 border border-sky-100 flex items-center justify-center text-center">
-<span class="font-label-code text-label-code text-[#475569] font-medium">
-          Engineer • Entrepreneur • Problem Solver
-        </span>
+</main>
+<!-- Bottom Tab Navigation Bar with Crisp Sky Light Aesthetics -->
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-white/80 backdrop-blur-xl border-t border-white/80 shadow-[0_-4px_20px_rgba(15,23,42,0.06)]" data-active-classes="text-slate-950 font-bold">
+<div class="flex items-center justify-around h-16 px-space-xs">
+<a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] transition-all text-slate-950 font-bold" data-path="home-hero" href="#">
+<div class="px-3 py-1 rounded-full bg-sky-100 flex items-center justify-center mb-0.5">
+<span class="material-symbols-outlined text-[20px] text-sky-800">terminal</span>
 </div>
-</section>
-<!-- Motto Callout Card (Day Warm Style) -->
-<section class="rounded-2xl bg-gradient-to-br from-[#091e3a] via-[#102d55] to-[#163e72] p-space-lg shadow-lg flex flex-col gap-space-xs text-white relative overflow-hidden">
-<div class="absolute -right-6 -bottom-6 w-36 h-36 rounded-full bg-amber-400/20 blur-xl pointer-events-none"></div>
-<div class="flex items-center justify-between">
-<span class="font-label-badge text-label-badge text-amber-300 uppercase tracking-wider font-semibold">
-          GUIDING MOTTO
-        </span>
-<span class="material-symbols-outlined text-amber-300 text-[26px]">format_quote</span>
-</div>
-<blockquote class="font-headline-md text-headline-md font-bold text-white mt-space-xs leading-snug">
-        “Keep Learning. Keep Improving. Keep Moving Forward.”
-      </blockquote>
-<div class="flex items-center gap-space-xs mt-space-xs">
-<span class="inline-block w-6 h-0.5 bg-amber-300/70"></span>
-<span class="font-label-code text-label-code text-sky-200">Ansh Pandey • Class 10 CBSE</span>
-</div>
-</section>
-<!-- Interactive Bottom CTA Pill -->
-<div class="flex items-center justify-center pt-space-xs">
-<a class="w-full py-space-sm px-space-lg rounded-full bg-[#091e3a] text-white flex items-center justify-center gap-space-xs font-headline-md text-[15px] font-semibold active:scale-95 transition-all shadow-[0_6px_20px_rgba(9,30,58,0.25)] hover:bg-[#102a4e]" data-path="contact-ansh-pandey" href="#">
-<span>Connect &amp; Collaborate</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+<span class="font-label-badge text-[11px] text-sky-950 font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] text-slate-600 transition-colors hover:text-slate-950" data-path="biodata" href="#">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+<span class="font-label-badge text-[11px] mt-0.5">Biodata</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] text-slate-600 transition-colors hover:text-slate-950" data-path="skills-work" href="#">
+<span class="material-symbols-outlined text-[22px]">code_blocks</span>
+<span class="font-label-badge text-[11px] mt-0.5">Skills</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[64px] min-h-[44px] text-slate-600 transition-colors hover:text-slate-950" data-path="contact" href="#">
+<span class="material-symbols-outlined text-[22px]">send</span>
+<span class="font-label-badge text-[11px] mt-0.5">Contact</span>
 </a>
 </div>
-</div>
-</div></main>
-<nav class="fixed bottom-0 w-full z-50 pb-safe bg-white/85 backdrop-blur-xl border-t border-white/70 shadow-[0_-2px_12px_rgba(0,35,80,0.06)]" data-active-classes="text-[#091e3a] font-semibold"><div class="grid grid-cols-5 items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-h-[44px] text-slate-500 transition-colors hover:text-[#091e3a] text-center" data-path="home-ansh-pandey-portfolio" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-label-badge text-label-badge mt-0.5 truncate max-w-full">Home</span></a><a class="flex flex-col items-center justify-center min-h-[44px] text-[#091e3a] font-bold transition-colors text-center" data-path="about-me-ansh-pandey" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span class="font-label-badge text-label-badge mt-0.5 truncate max-w-full font-bold">About</span></a><a class="flex flex-col items-center justify-center min-h-[44px] text-slate-500 transition-colors hover:text-[#091e3a] text-center" data-path="biodata-ansh-pandey" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-badge text-label-badge mt-0.5 truncate max-w-full">Biodata</span></a><a class="flex flex-col items-center justify-center min-h-[44px] text-slate-500 transition-colors hover:text-[#091e3a] text-center" data-path="skills-work-ansh-pandey" href="#"><span class="material-symbols-outlined text-[20px]">code</span><span class="font-label-badge text-label-badge mt-0.5 truncate max-w-full">Skills</span></a><a class="flex flex-col items-center justify-center min-h-[44px] text-slate-500 transition-colors hover:text-[#091e3a] text-center" data-path="contact-ansh-pandey" href="#"><span class="material-symbols-outlined text-[20px]">send</span><span class="font-label-badge text-label-badge mt-0.5 truncate max-w-full">Contact</span></a></div></nav>
+</nav>
+
+
+
+
 </body></html>
